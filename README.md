@@ -76,4 +76,4 @@ Tenemos grandes planes para EphemeralKey. Las próximas mejoras incluyen:
 
 ---
 
-Hecho con ❤️ por tu equipo de desarrollo.
+Hecho con ❤️ por Elizabeth (E-devv), Ingeniera en Sistemas.
