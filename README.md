@@ -67,6 +67,16 @@ La herramienta es muy fácil de usar. Aquí tienes algunos ejemplos:
 
 ---
 
+## 🧪 Pruebas
+
+Para ejecutar la suite de pruebas unitarias y asegurar que todo funcione correctamente, usa el siguiente comando:
+
+```bash
+python -m unittest test_ephemeralkey.py
+```
+
+---
+
 ## 🔮 Desarrollo Futuro
 
 Tenemos grandes planes para EphemeralKey. Las próximas mejoras incluyen:
