@@ -38,7 +38,11 @@ Para empezar a usar EphemeralKey, solo necesitas tener Python 3 instalado y segu
    ```
 
 2. **Requisitos**:
-   - El script no requiere dependencias externas, solo una instalación estándar de Python 3.
+   - El script utiliza la librería `pyperclip` para copiar los resultados al portapapeles.
+   - Instala las dependencias con el siguiente comando:
+     ```bash
+     pip install -r requirements.txt
+     ```
 
 ---
 
@@ -64,6 +68,13 @@ La herramienta es muy fácil de usar. Aquí tienes algunos ejemplos:
    ```bash
    python ephemeralkey.py --all
    ```
+
+4. **Copiar cualquier resultado al portapapeles**:
+   - Añade el argumento `-c` o `--copy` a cualquier comando para copiar el resultado.
+   - Ejemplo:
+     ```bash
+     python ephemeralkey.py --password -l 20 --copy
+     ```
 
 ---
 
