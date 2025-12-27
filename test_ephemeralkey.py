@@ -3,6 +3,7 @@ import random
 import string
 from ephemeralkey import generate_strong_password, generate_temp_email
 
+
 class TestPasswordGenerator(unittest.TestCase):
 
     def test_password_length(self):
@@ -46,21 +47,34 @@ class TestPasswordGenerator(unittest.TestCase):
         password = generate_strong_password(use_lower=False)
         self.assertFalse(any(c in string.ascii_lowercase for c in password))
 
-
     def test_only_one_character_type(self):
-        """Verifies that the password is generated with only one character type."""
+        """
+        Verifies that the password is generated with only one character type.
+        """
         random.seed(0)
-        password = generate_strong_password(use_upper=True, use_lower=False, use_digits=False, use_symbols=False)
+        password = generate_strong_password(
+            use_upper=True, use_lower=False,
+            use_digits=False, use_symbols=False
+        )
         self.assertTrue(all(c in string.ascii_uppercase for c in password))
-
         random.seed(0)
-        password = generate_strong_password(use_upper=False, use_lower=False, use_digits=True, use_symbols=False)
+        password = generate_strong_password(
+            use_upper=False, use_lower=False,
+            use_digits=True, use_symbols=False
+        )
         self.assertTrue(all(c in string.digits for c in password))
 
     def test_no_character_sets_selected_raises_error(self):
-        """Verifies that a ValueError is raised if no character type is selected."""
+        """
+        Verifies that a ValueError is raised if no character type is
+        selected.
+        """
         with self.assertRaises(ValueError):
-            generate_strong_password(use_upper=False, use_lower=False, use_digits=False, use_symbols=False)
+            generate_strong_password(
+                use_upper=False, use_lower=False,
+                use_digits=False, use_symbols=False
+            )
+
 
 class TestEmailGenerator(unittest.TestCase):
 
@@ -88,7 +102,10 @@ class TestEmailGenerator(unittest.TestCase):
         self.assertEqual(len(username), 10)
 
     def test_username_characters(self):
-        """Verifies that the username contains only valid characters (lowercase and digits)."""
+        """
+        Verifies that the username contains only valid characters (lowercase
+        and digits).
+        """
         random.seed(0)
         email = generate_temp_email(username_length=20)
         username = email.split('@')[0]
