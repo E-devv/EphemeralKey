@@ -1,5 +1,7 @@
 # EphemeralKey 🔑
 
+[![CI](https://github.com/E-devv/EphemeralKey/actions/workflows/ci.yml/badge.svg)](https://github.com/E-devv/EphemeralKey/actions/workflows/ci.yml)
+
 *Tu navaja suiza para la seguridad y el anonimato en línea.*
 
 ---
